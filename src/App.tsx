@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -41,10 +40,6 @@ function Topics() {
         </li>
       </ul>
 
-      {/* The Topics page has its own <Switch> with more routes
-          that build on the /topics URL path. You can think of the
-          2nd <Route> here as an "index" page for all topics, or
-          the page that is shown when no topic is selected */}
       <Switch>
         <Route path={`${match.path}/:topicId`}>
           <Topic />
@@ -58,14 +53,6 @@ function Topics() {
 }
 
 export default function App() {
-  useEffect(() => {
-    axios.get('/users/2')
-      .then((res) => {
-        console.dir('called');
-        console.dir(res.data);
-      });
-  }, []);
-
   return (
     <Router>
       <div>
