@@ -28,6 +28,22 @@ module.exports = {
         ]
       },
       {
+        test: /\.scss/, 
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false,
+              importLoaders: 2
+            },
+          },
+          {
+            loader: 'sass-loader',
+          }
+        ],
+      },
+      {
         test: /\.(tsx|ts)$/,
         exclude: /node_modules/,
         use: 'ts-loader',
