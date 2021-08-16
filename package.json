@@ -1,7 +1,7 @@
 {
-  "name": "react_webpack_template",
+  "name": "react-typescript-firebase-webpack-template",
   "version": "1.0.0",
-  "description": "React + TypeScript + Webpack + Firebaseのテンプレート",
+  "description": "boiler template for developing with react, typescript, firebase, webpack",
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack.prod.js",

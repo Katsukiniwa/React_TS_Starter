@@ -8,7 +8,6 @@ import {
   useParams,
 } from 'react-router-dom';
 import { NovelIndexPage } from './view/pages/novel/Index';
-import { AboutPage } from './view/pages/About';
 import { HomePage } from './view/pages/Home';
 
 function Topic() {
