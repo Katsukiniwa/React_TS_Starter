@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   AlertDialog,
   AlertDialogBody,
@@ -10,11 +10,7 @@ import {
 } from '@chakra-ui/react';
 
 export const HomePage = () => {
-  const [open, setOpen] = useState(true);
-
-  useEffect(() => {
-    console.log('home');
-  }, []);
+  const [open, setOpen] = useState(false);
 
   return (
     <div>

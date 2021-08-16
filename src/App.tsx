@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,7 +8,6 @@ import {
   useParams,
 } from 'react-router-dom';
 import { NovelIndexPage } from './view/pages/novel/Index';
-import { AboutPage } from './view/pages/About';
 import { HomePage } from './view/pages/Home';
 
 function Topic() {
@@ -41,10 +39,6 @@ function Topics() {
         </li>
       </ul>
 
-      {/* The Topics page has its own <Switch> with more routes
-          that build on the /topics URL path. You can think of the
-          2nd <Route> here as an "index" page for all topics, or
-          the page that is shown when no topic is selected */}
       <Switch>
         <Route path={`${match.path}/:topicId`}>
           <Topic />
@@ -58,14 +52,6 @@ function Topics() {
 }
 
 export default function App() {
-  useEffect(() => {
-    axios.get('/users/2')
-      .then((res) => {
-        console.dir('called');
-        console.dir(res.data);
-      });
-  }, []);
-
   return (
     <Router>
       <div>
@@ -87,9 +73,6 @@ export default function App() {
         <Switch>
           <Route path="/novels">
             <NovelIndexPage />
-          </Route>
-          <Route path="/about">
-            <AboutPage />
           </Route>
           <Route path="/topics">
             <Topics />
