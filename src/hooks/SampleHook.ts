@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from 'react';
-import { NovelContext, NovelUpdateContext } from '../context/NovelContext';
-import { actions, State } from '../reducer/NovelReducer';
+import { SampleContext, SampleUpdateContext } from '../context/SampleContext';
+import { actions, State } from '../reducer/SampleReducer';
 
-export const useNovelFetch = (): [State, () => void] => {
-  const novel = useContext(NovelContext);
-  const dispatch = useContext(NovelUpdateContext);
+export const useSampleFetch = (): [State, () => void] => {
+  const sample = useContext(SampleContext);
+  const dispatch = useContext(SampleUpdateContext);
   const [refetchIndex, setRefetchIndex] = useState(0);
 
   const refetch = () => setRefetchIndex((prevRefetchIndex) => prevRefetchIndex + 1);
@@ -22,5 +22,5 @@ export const useNovelFetch = (): [State, () => void] => {
     fetchData();
   }, [refetchIndex]);
 
-  return [novel, refetch];
+  return [sample, refetch];
 };

@@ -1,9 +1,9 @@
 import React from 'react';
-import { useNovelFetch } from '../../../hooks/NovelHook';
-import { NovelCard } from '../../components/novel/NovelCard';
+import { useSampleFetch } from '../../../hooks/SampleHook';
+import { SampleCard } from '../../components/novel/SampleCard';
 
 export const NovelIndexPage = () => {
-  const [novel, refetch] = useNovelFetch();
+  const [novel, refetch] = useSampleFetch();
 
   return (
     <div className="App">
@@ -13,7 +13,7 @@ export const NovelIndexPage = () => {
       <p>{novel?.isError ? novel?.isError : null}</p>
       {novel?.novels != null && (
         <div>
-          {novel.novels.map((n) => <NovelCard novelProps={n} key={n.id} />)}
+          {novel.novels.map((n) => <SampleCard novelProps={n} key={n.id} />)}
         </div>
       )}
     </div>

@@ -4,7 +4,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import App from './App';
 import './view/styles/styles.css';
 import './view/styles/base.scss';
-import { NovelContextProvider } from './context/NovelContext';
+import { SampleContextProvider } from './context/SampleContext';
 
 if (process.env.NODE_ENV === 'development') {
   // eslint-disable-next-line global-require
@@ -15,9 +15,9 @@ if (process.env.NODE_ENV === 'development') {
 ReactDOM.render(
   <React.StrictMode>
     <ChakraProvider>
-      <NovelContextProvider>
+      <SampleContextProvider>
         <App />
-      </NovelContextProvider>
+      </SampleContextProvider>
     </ChakraProvider>
   </React.StrictMode>,
   document.getElementById('root'),

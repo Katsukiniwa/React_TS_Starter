@@ -6,7 +6,7 @@ interface NovelProps {
   title: string;
 }
 
-export const NovelCard = ({ novelProps }: { novelProps: NovelProps }) => {
+export const SampleCard = ({ novelProps }: { novelProps: NovelProps }) => {
   const novelEntity = new Novel(novelProps.id, novelProps.title);
   const [title, setTitle] = useState('');
   const [novel, setNovel] = useState(novelEntity);
