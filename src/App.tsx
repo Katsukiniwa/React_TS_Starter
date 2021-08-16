@@ -74,9 +74,6 @@ export default function App() {
           <Route path="/novels">
             <NovelIndexPage />
           </Route>
-          <Route path="/about">
-            <AboutPage />
-          </Route>
           <Route path="/topics">
             <Topics />
           </Route>
