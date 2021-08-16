@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Novel } from '../../../domain/Novel';
+import { Novel } from '../../domain/article/Article';
 
 interface NovelProps {
   id: string;

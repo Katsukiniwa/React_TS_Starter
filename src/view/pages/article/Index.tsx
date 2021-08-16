@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSampleFetch } from '../../../hooks/SampleHook';
-import { SampleCard } from '../../components/novel/SampleCard';
+import { SampleCard } from '../../components/SampleCard';
 
 export const NovelIndexPage = () => {
   const [novel, refetch] = useSampleFetch();

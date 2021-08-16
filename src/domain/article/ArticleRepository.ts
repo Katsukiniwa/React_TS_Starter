@@ -1,6 +1,6 @@
-import { Novel } from './Novel';
+import { Novel } from './Article';
 
-export interface NovelRepository {
+export interface ArticleRepository {
   // eslint-disable-next-line no-unused-vars
   store(novel: Novel): void
 }

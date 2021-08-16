@@ -7,7 +7,7 @@ import {
   useRouteMatch,
   useParams,
 } from 'react-router-dom';
-import { NovelIndexPage } from './view/pages/novel/Index';
+import { NovelIndexPage } from './view/pages/article/Index';
 import { HomePage } from './view/pages/Home';
 
 function Topic() {
