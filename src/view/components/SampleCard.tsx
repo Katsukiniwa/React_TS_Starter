@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Novel } from '../../domain/article/Article';
+import { FormGroup, Input } from './BaseForms';
 
 interface NovelProps {
   id: string;
@@ -17,11 +18,10 @@ export const SampleCard = ({ novelProps }: { novelProps: NovelProps }) => {
 
   return (
     <div>
-      <h1>
-        {novel.title}
-      </h1>
-
-      <input type="text" onChange={(event) => setTitle(event.target.value)} />
+      <h1>{novel.title}</h1>
+      <FormGroup>
+        <Input onChange={(event) => setTitle(event.target.value)} />
+      </FormGroup>
       <button type="button" onClick={() => handleClick(title)}>タイトルを変更する</button>
     </div>
   );

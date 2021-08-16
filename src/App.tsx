@@ -55,7 +55,7 @@ export default function App() {
       <div>
         <ul>
           <li>
-            <Link to="/novels">Novels</Link>
+            <Link to="/novels">Articles</Link>
           </li>
           <li>
             <Link to="/">Home</Link>
